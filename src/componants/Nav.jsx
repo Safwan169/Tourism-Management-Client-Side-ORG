@@ -12,7 +12,7 @@ const Nav = () => {
   const info = useContext(myContext)
   const { user, setDep2, dep2 } = info
   console.log(user)
-  const [use, setUse] = useState(true)
+  const [use, setUse] = useState(false)
   const signOutt = () => {
 
     const auth = getAuth();
@@ -52,7 +52,7 @@ const Nav = () => {
       </li>
       </div>
     <div className="lg:flex">  <li className="text-xl font-semibold">
-        <NavLink to={'/MyList'} style={({ isActive }) => ({
+        <NavLink to={'/list'} style={({ isActive }) => ({
           background: isActive ? "white" : "", color: isActive ? "#1bc91b" : "black"
         })}>My List</NavLink>
       </li>
@@ -87,7 +87,7 @@ const Nav = () => {
             {nav}
           </ul>
         </div>
-        <a className="flex items-center text-xl"><img className="w-24 h-full" src="https://i.ibb.co/ScrX6mj/Brite-logo-300x300.png" alt="" /> </a>
+        <a className="flex items-center text-xl"><img className="w-24 h-full" src="https://i.ibb.co/R44y6TY/Brite-logo-300x300.png" alt="" /> </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -101,9 +101,9 @@ const Nav = () => {
       </div>
       <div className="navbar-end lg:flex md:flex hidden    w-[120px] ml-4">
         {
-          <button onClick={() => setUse(!use)} className=" text-black justify-center  "><FaUserCircle size={40} /></button>}
+          <button onClick={() => setUse(!use)} className=" text-black justify-center  "><FaUserCircle size={40} className="hover:text-red-400" /></button>}
         {
-          use ? <div className="absolute border space-y-2 border-gray-300 rounded-xl py-2 top-16  right-9 px-10 mt-4 text-gray-500 font-semibold">
+          use ? <div className="absolute border-2  space-y-2 border-gray-300 rounded-xl py-2 top-16  right-9 px-10 mt-4 text-gray-500 font-semibold">
             {
               user ? <Link className="hover:underline" onClick={() => signOutt()}>Sign Out</Link > : <div className="flex flex-col space-y-2">
                 <Link className="hover:underline" to={"/login"}>Sign In</Link >
