@@ -1,15 +1,17 @@
 import React from 'react';
 import "animate.css"
 import Swal from 'sweetalert2';
-// import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
-const Add = () => {
-    // console.log(id)
+const Updatae = () => {
+    const id=useParams()
+    console.log(id.id)
+    const idd=id.id
     const handleSubmit=(e)=>{
         e.preventDefault()
         // console.log(e.target.options.value)
-        const email=e.target.email.value;
-        const name=e.target.name.value;
+        // const email=e.target.email.value;
+        // const name=e.target.name.value;
         const Country =e.target.Country .value;
         const spot=e.target.spot.value;
         const location=e.target.location.value;
@@ -19,11 +21,12 @@ const Add = () => {
         const url=e.target.url.value;
         const options=e.target.options.value;
         const description=e.target.description.value;
-        console.log(email,name,options,description)
-        const user={email,name,options,description,time,url,cost,visitors,location,spot,Country}
-        // send data to the server
-        fetch("http://localhost:3028/ad", {
-            method: 'POST',
+        // console.log(options,description)
+        const user={options,description,time,url,cost,visitors,location,spot,Country}
+        console.log(user)
+
+        fetch(`http://localhost:3028/up/${idd}`, {
+            method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
@@ -32,34 +35,33 @@ const Add = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.insertedId){
-
+                if (data.modifiedCount > 0) {
                     Swal.fire({
-                        title: "Good job!",
-                        text: "You have successfully added a spot",
-                        icon: "success",
-                        showConfirmButton: false,
-                        timer: 2000
-    
-                      });  
+                        title: ' Updated Successfully!',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
                 }
+            })
+    
+    
+    
+    
+    
+    }
 
-            })}
     return (
-        <div  className=' animate__animated  animate__zoomIn animate__delay-0.99s  w-[1200px] mx-auto'>
+          <div  className=' animate__animated  animate__zoomIn animate__delay-0.99s my-20  w-[1200px] mx-auto'>
             <div className='text-center  mt-20 '>
                 <div className=' justify-center mb-10 flex'>
-                    <p className='text-2xl font-bold  mb-4 border-b-2 pb-4 px-4 border-black w-max  text-center '>Add Tourist Spot</p>
+                    <p className='text-2xl font-bold  mb-4 border-b-2 pb-4 px-4 border-black w-max  text-center '>Update Spot</p>
 
                 </div>
                 <form onSubmit={handleSubmit} >
 
-                    <div className='flex gap-5  justify-center  '>
-                        <span className='w-1/2'>
-                            {/* <label className="label">
-                                <span className="label-text text-xl font-semibold">Email</span>
-                            </label>
-                            <input type="email" placeholder="Email" className="w-full input input-bordered" required /> */}
+                    {/* <div className='flex gap-5  justify-center  '> */}
+                        {/* <span className='w-1/2'>
+
 
                             <label className="label">
                                 <span className="label-text text-xl font-semibold">Email</span>
@@ -68,12 +70,9 @@ const Add = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" /><path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" /></svg>
                                 <input type="email" name='email' className="w-full " required placeholder="Email" />
                             </label>
-                        </span>
-                        <span className=' w-1/2'>
-                            {/* <label className="label">
-                                <span className="label-text text-xl font-semibold">Name</span>
-                            </label>
-                            <input type="text" placeholder="Name" className="w-full  input input-bordered" required /> */}
+                        </span> */}
+                        {/* <span className=' w-1/2'>
+                           
                             <label className="label">
                                 <span className="label-text text-xl font-semibold">Name</span>
                             </label>
@@ -82,7 +81,7 @@ const Add = () => {
                                 <input type="text" name='name' class="w-full" placeholder="Username" />
                             </label>
                         </span>
-                    </div>
+                    </div> */}
                     <div className='flex gap-5  justify-center  '>
                         <span className='w-1/2'>
                             <label className="label">
@@ -153,7 +152,7 @@ const Add = () => {
                         <textarea name='description' className="textarea  w-full  border-gray-300 h-24" placeholder="Write Something ... "></textarea>
 
                     </div>
-                    <button className='mt-8  btn w-1/2 mx-auto text-2xl font-semibold text-white p-2 bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-500 '>Add Item</button>
+                    <button className='mt-8  btn w-1/2 mx-auto text-2xl font-semibold text-white p-2 bg-gradient-to-r  from-blue-500 to-cyan-500 '>Update</button>
 
                 </form>
             </div>
@@ -161,4 +160,4 @@ const Add = () => {
     );
 };
 
-export default Add;
+export default Updatae;

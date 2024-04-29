@@ -18,6 +18,9 @@ import Error from './componants/Error';
 import Add from './componants/Add';
 import PrivateRoute from './componants/PrivateRoute';
 import List from './componants/List';
+import Details from './componants/Details';
+import Spot from './componants/Spot';
+import Updatae from './componants/Updatae';
 
 
 
@@ -29,6 +32,7 @@ const router = createBrowserRouter([
     children:[
       {
         path:"/",
+        loader:()=>fetch("http://localhost:3028/ad"),
         element:<Home></Home>
       },{
         path:"/login",
@@ -40,8 +44,26 @@ const router = createBrowserRouter([
         path:"/add",
         element:<PrivateRoute><Add></Add></PrivateRoute>
       },{
-        path:"list",
+        path:"/list",
+        loader:()=>fetch(`http://localhost:3028/ad`),
+
         element:<PrivateRoute><List></List></PrivateRoute>
+      }
+      ,{
+        path:"/ad/:_id",
+        loader:()=>fetch(`http://localhost:3028/ad`),
+
+        element:<PrivateRoute><Details></Details></PrivateRoute>
+      },{
+        path:"/spot",
+        loader:()=>fetch(`http://localhost:3028/ad`),
+
+        element:<PrivateRoute><Spot></Spot></PrivateRoute>
+      } ,{
+        path:"/update/:id",
+        // loader:()=>fetch(`http://localhost:3028/ad`),
+
+        element:<PrivateRoute><Updatae></Updatae></PrivateRoute>
       }
     ]
    
