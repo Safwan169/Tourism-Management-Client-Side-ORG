@@ -21,6 +21,8 @@ import List from './componants/List';
 import Details from './componants/Details';
 import Spot from './componants/Spot';
 import Updatae from './componants/Updatae';
+import Allcountry from './componants/Allcountry';
+import Countrycard from './componants/Countrycard';
 
 
 
@@ -64,7 +66,14 @@ const router = createBrowserRouter([
         // loader:()=>fetch(`http://localhost:3028/ad`),
 
         element:<PrivateRoute><Updatae></Updatae></PrivateRoute>
-      }
+      },{
+        path:"/country/:Country",
+        loader:()=>fetch(`http://localhost:3028/ad`),
+
+        // loader:({params})=>fetch(`http://localhost:3028/country/${params.Country}`),
+
+        element:<PrivateRoute><Allcountry></Allcountry></PrivateRoute>
+      },
     ]
    
   },
