@@ -95,13 +95,13 @@ const Nav = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        {
+        {/* {
           user ? <div className="  -ml-[50px] tooltip hover:tooltip-open tooltip-bottom z-30" data-tip={user.displayName ? user.displayName : "Not Available"}  ><img className="rounded-[50%] w-[50px] bg-white " src={user.photoURL} alt="" /></div> : ''
-        }
+        } */}
       </div>
       <div className="navbar-end lg:flex md:flex hidden    w-[120px] ml-4">
         {
-          <button onClick={() => setUse(!use)} className=" text-black justify-center  "><FaUserCircle size={40} className="hover:text-red-400" /></button>}
+         user?<div onClick={() => setUse(!use)} className="  -ml-[50px] tooltip hover:tooltip-open tooltip-left z-30" data-tip={user.displayName ? user.displayName : "Not Available"}  ><img className="rounded-[50%] w-[50px] bg-white " src={user.photoURL} alt="" /></div> : <button onClick={() => setUse(!use)} className=" text-black justify-center  "><FaUserCircle size={40} className="hover:text-red-400" /></button>}
         {
           use ? <div className="absolute border-2  space-y-2 border-gray-300 rounded-xl py-2 top-16  right-9 px-10 mt-4 text-gray-500 font-semibold">
             {
