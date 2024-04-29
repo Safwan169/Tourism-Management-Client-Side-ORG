@@ -46,7 +46,7 @@ const Add = () => {
 
             })}
     return (
-        <div  className=' animate__animated  animate__zoomIn animate__delay-0.99s  w-[1200px] mx-auto'>
+        <div  className=' animate__animated  animate__zoomIn animate__delay-0.99s my-10  w-[1200px] mx-auto'>
             <div className='text-center  mt-20 '>
                 <div className=' justify-center mb-10 flex'>
                     <p className='text-2xl font-bold  mb-4 border-b-2 pb-4 px-4 border-black w-max  text-center '>Add Tourist Spot</p>

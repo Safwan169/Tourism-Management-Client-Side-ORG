@@ -4,6 +4,17 @@ import { useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const List = () => {
+
+  const data = useLoaderData()
+  const auth = useContext(myContext)
+  const { user } = auth
+  console.log(user.reloadUserInfo.email
+  )
+  console.log(data[0].email)
+  const match = data.filter(d => d.email === user.reloadUserInfo.email)
+  // console.log(datas)
+  const [datas,setDatas]=useState(match)
+
     const navigate = useNavigate()
     const handleUpdate = (d) => {
       console.log(d.d._id)
@@ -41,8 +52,8 @@ const List = () => {
                   'Your Coffee has been deleted.',
                   'success'
                 )
-              // const remaining = coffees.filter(cof => cof._id !== _id);
-              // setCoffees(remaining);
+              const remaining = match.filter(ma => ma._id !== id);
+              setDatas(remaining);
               }})}})}
       
 
@@ -50,21 +61,14 @@ const List = () => {
 
 
 
-    const data = useLoaderData()
-    const auth = useContext(myContext)
-    const { user } = auth
-    console.log(user.reloadUserInfo.email
-    )
-    console.log(data[0].email)
-    const match = data.filter(d => d.email !== user.reloadUserInfo.email)
-    console.log(match)
+   
     // const {Country,spot,cost}=match;
     return (
-      <div>
+      <div className='my-20'>
         <div className="overflow-x-auto">
-          <table className="table">
+          <table className="table  ">
             {/* head */}
-            <thead>
+            <thead className='border-b-2'>
               <tr>
                 <th></th>
                 <th>Country</th>
@@ -72,20 +76,26 @@ const List = () => {
                 <th>Cost</th>
               </tr>
             </thead>
-            {match.map(d => <tbody>
+
+          
+            {datas.map(d => <tbody  className=''>
               {/* row 1 */}
               <tr>
                 <th>{d.length}</th>
                 <td>{d.Country}</td>
                 <td>{d.spot}</td>
                 <td>{d.cost}</td>
-                <td><button onClick={() => handleUpdate({ d })} className='btn'>Update</button></td>
-                <td><button onClick={() => handleDelate({ d })} className='btn'>delate</button></td>
+                <span><button onClick={() => handleUpdate({ d })} className='btn bg-green-400 text-white font-bold'>Update</button></span>
+                <span><button onClick={() => handleDelate({ d })} className='btn ml-3 bg-red-500 text-white font-bold'>delate</button></span>
               </tr>
 
 
             </tbody>)}
           </table>
+          <div className=' w-full'>
+            {datas.Country || <div className=' w-full text-center text-4xl my-10 text-gray-500 font-semibold'>No data added</div>}
+
+            </div>
         </div>
       </div>
     );
