@@ -113,7 +113,53 @@ const Home = () => {
                     </div>
 
                 </div>
+                <div className='m-10'>
+                    <div className='  lg:ml-20 text-4xl border-b-2 pb-4 px-4 border-blue-300 w-max font-semibold mb-10  mt-28  '>
+                        <span className=' mb-4 pb-4 '>Clients Reviews
+                        </span>
+
+                    </div>
+                </div>
+                <div className="flex">
+                    <div className='mt-5'>
+
+                        <div className="card w-96 rounded-1/2  bg-base-100 shadow-xl">
+                            <figure><img src="https://i.ibb.co/R3D6G0k/1s.jpg" alt="" /></figure>
+                            <div className="card-body">
+
+                                <p>Smooth and efficient! Booking my rides has never been easier since I started using this transport website. From user-friendly interfaces to lightning-fast booking processes, it's a traveler's dream come true.</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div className='mt-5'>
+
+                        <div className="card w-96 rounded-1/2  bg-base-100 shadow-xl">
+                            <figure><img src="https://i.ibb.co/4KQR7kv/2d.jpg" alt="" /></figure>
+                            <div className="card-body">
+
+                                <p>Reliable and convenient! I've relied on this transport website for all my travel needs, whether it's a quick ride across town or a long-distance journey. With real-time updates and a wide range of transportation options, I always feel in control of my travel plans.</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div className='mt-5'>
+
+                        <div className="card w-96 rounded-1/2  bg-base-100 shadow-xl">
+                            <figure><img className='h-[200px] w-[200px]' src="https://i.ibb.co/fdvNbML/3d.jpg" alt="" /></figure>
+                            <div className="card-body">
+
+                                <p>Top-notch service! This transport website sets the standard for excellence. From the moment I land on the homepage to the completion of my trip, every aspect is carefully crafted for a seamless experience. It's like having a personal travel assistant at my fingertips.</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+
 
         </>
     );
