@@ -20,11 +20,11 @@ const Countrycard = ({datas}) => {
         <div onClick={() => details(Country)} data-aos="zoom-in-left ">
             <div className="hd shadow-2xl w-full  h-min lg:w-[378px]  lg:pl-0 1 rounded-2xl mt-4 lg:mt-0">
                 <div className="card card-compact flex items-center mt-4 lg:mt-0  bg-base-100 text-center  shadow-xl h-[550px] ">
-                    <figure className="w-[230px] md:w-[500px] lg:px-1 lg:w-[375px] lg:mx-auto"><img className="hero-overlay bg-opacity-60  mt-5 lg:mt-0 lg:w-full h-[240px] bg-cover rounded-xl  " src={url} alt="image" /></figure>
+                    <figure className="w-[230px] md:w-[500px]  lg:w-[374px] lg:mx-auto"><img className="hero-overlay bg-opacity-60  mt-5 lg:mt-0 lg:w-full h-[240px] bg-cover rounded-xl  " src={url} alt="image" /></figure>
                     <div className="card-body  w-full ">
                         <div className="h-[50px] ">
                             <p className="text-3xl font-semibold w-[339px] md:w-full md:text-center text-blue-500 lg:text-start  hv text-start ml-2  ">{Country}</p>
-                            <div className='  italic  text-orange-400   mt-10 text-2xl font-normal w-[339px] md:w-full   hv text-start '>{description}</div>
+                            <div className='  italic  text-orange-400 px-2  mt-10 text-2xl font-normal w-[339px] md:w-full   hv text-start '>{description}</div>
 
                         </div>
                         {/* <div className="md:flex lg:flex-col md:justify-between">

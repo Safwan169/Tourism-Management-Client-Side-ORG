@@ -10,10 +10,11 @@ const List = () => {
   const { user } = auth
   console.log(user.reloadUserInfo.email
   )
-  console.log(data[0].email)
+  // console.log(data[0].email)
   const match = data.filter(d => d.email === user.reloadUserInfo.email)
-  // console.log(datas)
   const [datas,setDatas]=useState(match)
+  console.log(datas)
+
 
     const navigate = useNavigate()
     const handleUpdate = (d) => {
@@ -49,7 +50,7 @@ const List = () => {
               if (data.deletedCount > 0) {
                 Swal.fire(
                   'Deleted!',
-                  'Your Coffee has been deleted.',
+                  'Your Spot has been deleted.',
                   'success'
                 )
               const remaining = match.filter(ma => ma._id !== id);
@@ -93,7 +94,7 @@ const List = () => {
             </tbody>)}
           </table>
           <div className=' w-full'>
-            {datas.Country || <div className=' w-full text-center text-4xl my-10 text-gray-500 font-semibold'>No data added</div>}
+            {/* {datas.Country ||<div className=' w-full text-center text-4xl my-10 text-gray-500 font-semibold'>No data added</div>} */}
 
             </div>
         </div>

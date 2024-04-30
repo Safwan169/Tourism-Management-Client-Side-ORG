@@ -14,3 +14,13 @@
 .border{
     border: 1px solid red;
   }
+
+  .hd:hover img {
+    transition: transform 0.3s ease;
+  
+    transform: scale(1.1); 
+  }
+  .hd:hover .hv {
+  color: rgb(153, 109, 15);
+  
+  }

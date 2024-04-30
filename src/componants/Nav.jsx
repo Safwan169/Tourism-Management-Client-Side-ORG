@@ -63,19 +63,10 @@ const Nav = () => {
         user ? <Link ><button onClick={() => signOutt()} className=" font-bold  p-1 btn  justify-center flex rounded-xl w-[80px]">Log out</button></Link> : <Link to={'/login'}><button className="btn font-bold p-1  justify-center flex rounded-xl w-[80px]">Log in</button></Link>
       }
     </div>
-    {/* {user && <div className="lg:flex"> <li className="text-xl font-semibold"><NavLink to={'/user'} style={({ isActive }) => ({
-      background: isActive ? "white" : "", color: isActive ? "#1bc91b" : "black"
-    })} >My Profile</NavLink></li>
-      <li className="text-xl font-semibold"><NavLink to={'/update'} style={({ isActive }) => ({
-        background: isActive ? "white" : "", color: isActive ? "#1bc91b" : "black"
-      })} >Update Profile</NavLink></li>
-      <li className="text-xl font-semibold"><NavLink to={'/about'} style={({ isActive }) => ({
-        background: isActive ? "white" : "", color: isActive ? "#1bc91b" : "black"
-      })} >About Us</NavLink></li>
-    </div>} */}
+   
   </>
   return (
-    <div className="navbar bg-base-100 px-20">
+    <div className="static navbar bg-base-100 px-20">
       <Toaster></Toaster>
       <div className="navbar-start">
         <div className="dropdown">
@@ -95,15 +86,13 @@ const Nav = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        {/* {
-          user ? <div className="  -ml-[50px] tooltip hover:tooltip-open tooltip-bottom z-30" data-tip={user.displayName ? user.displayName : "Not Available"}  ><img className="rounded-[50%] w-[50px] bg-white " src={user.photoURL} alt="" /></div> : ''
-        } */}
+       
       </div>
       <div className="navbar-end lg:flex md:flex hidden    w-[120px] ml-4">
         {
          user?<div onClick={() => setUse(!use)} className="  -ml-[50px] tooltip hover:tooltip-open tooltip-left z-30" data-tip={user.displayName ? user.displayName : "Not Available"}  ><img className="rounded-[50%] w-[50px] bg-white " src={user.photoURL} alt="" /></div> : <button onClick={() => setUse(!use)} className=" text-black justify-center  "><FaUserCircle size={40} className="hover:text-red-400" /></button>}
         {
-          use ? <div className="absolute border-2  space-y-2 border-gray-300 rounded-xl py-2 top-16  right-9 px-10 mt-4 text-gray-500 font-semibold">
+          use ? <div className="absolute border-2 z-50 bg-gray-400 text-white space-y-2 border-gray-300 rounded-xl py-2 top-16  right-9 px-10 mt-4  font-semibold">
             {
               user ? <Link className="hover:underline" onClick={() => signOutt()}>Sign Out</Link > : <div className="flex flex-col space-y-2">
                 <Link className="hover:underline" to={"/login"}>Sign In</Link >
@@ -112,23 +101,10 @@ const Nav = () => {
             }
           </div> : ''
         }
-        {/* {
-          user ? <Link ><button onClick={() => signOutt()} className="font-bold bg-orange-400 p-2 btn text-white justify-center  rounded-xl w-[100px]">Log out</button></Link> : <Link to={'/login'}><button className=" btn font-bold bg-orange-400 p-2  text-white justify-center  rounded-xl w-[100px]">Log in</button></Link>
-        } */}
+       
       </div>
-      {/* <Toaster></Toaster> */}
-      {/* <Toaster toastOptions={{
-        className: '',
-        style: {
-          marginTop: '50px',
-          marginRight: '70px',
-          fontWeight: 'bolder'
-        },
-      }}
-        position="top-right"
-        reverseOrder={false}
-
-      /> */}
+ 
+    
     </div>
   );
 };

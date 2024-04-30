@@ -17,8 +17,8 @@ const Ext = ({data}) => {
     return (
         <div className='' data-aos="zoom-in-left ">
             <div className="hd shadow-2xl w-full  h-min lg:w-[378px]  lg:pl-0 1 rounded-2xl mt-4 lg:mt-0">
-                <div className="card card-compact flex items-center mt-4 lg:mt-0  bg-base-100 text-center  shadow-xl h-[600px] ">
-                    <figure className="w-[230px] md:w-[500px] lg:px-1 lg:w-[375px] lg:mx-auto"><img className="hero-overlay bg-opacity-60  mt-5 lg:mt-0 lg:w-full h-[240px] bg-cover rounded-xl  " src={url} alt="image" /></figure>
+                <div className="card card-compact flex items-center mt-4 lg:mt-0  bg-base-100 text-center  shadow-xl h-[650px] ">
+                    <figure className="w-[230px] md:w-[500px] lg:px-1 lg:h-[600px] lg:w-[375px] lg:mx-auto"><img className="hero-overlay bg-opacity-60  mt-5 lg:mt-0 lg:w-full  h-[440px] bg-cover rounded-xl  " src={url} alt="image" /></figure>
                     <div className="card-body  w-full ">
                         <div className="h-[50px] lg:flex lg:justify-between ">
                             <p  className="text-2xl font-semibold w-[339px] md:w-full md:text-center lg:text-start  hv text-start ml-2  ">{spot}</p>

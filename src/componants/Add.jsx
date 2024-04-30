@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "animate.css"
 import Swal from 'sweetalert2';
+import { myContext } from './Authentication';
 // import { useParams } from 'react-router-dom';
 
 const Add = () => {
     // console.log(id)
+    // const user=useContext(myContext)
     const handleSubmit=(e)=>{
         e.preventDefault()
         // console.log(e.target.options.value)
