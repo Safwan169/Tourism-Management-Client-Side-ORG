@@ -7,6 +7,7 @@ import { IoTimeOutline } from "react-icons/io5";
 import { useNavigate } from "react-router";
 const Ext = ({data}) => {
     console.log(data)
+    
     const navigate = useNavigate()
 
     const details=(_id)=>{
