@@ -69,7 +69,7 @@ const router = createBrowserRouter([
         element:<PrivateRoute><Updatae></Updatae></PrivateRoute>
       },{
         path:"/country/:Country",
-        loader:()=>fetch(`https://b9a10-server-side-safwan169.vercel.app/country`),
+        loader:()=>fetch(`http://localhost:5000/country`),
 
         // loader:({params})=>fetch(`https://b9a10-server-side-safwan169-mwvtb8ury-safwan-hossains-projects.vercel.app/country/${params.Country}`),
 
