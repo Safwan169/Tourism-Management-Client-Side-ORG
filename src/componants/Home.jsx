@@ -19,13 +19,13 @@ import Countrycard from './Countrycard';
 
 
 const Home = () => {
-   
+
 
     const data = useLoaderData()
-console.log(data)
+    console.log(data)
 
     const slicedData = data.slice(0, 6);
-console.log(data)
+    console.log(data)
 
     // console.log(data2)
     return (
@@ -72,16 +72,47 @@ console.log(data)
             </div>
 
             <div className='  lg:ml-20 text-4xl border-b-2 pb-4 px-4 border-blue-300 w-max font-semibold mb-10  mt-28  '>
-                <span className=' mb-4 pb-4 '>Trending destinations
+                <span className=' mb-4 pb-4 '>Question From
                 </span>
-                <p className=' font-light text-xl italic'>Most popular choices for travelers
+                <p className=' font-light text-xl italic'>Here you can ask any Question in our system related
                 </p>
             </div>
-            <div className="lg:grid  lg:grid-cols-3 justify-center gap-4 w-full lg:w-[1200px] mx-auto my-10">
+            <div className=" w-full lg:w-[1200px] mx-auto my-5">
 
-                {
-                    slicedData.map((d, id) => <Countrycard idx={id} datas={d}></Countrycard>)
-                }
+                <div>
+                    <div className="hero   ">
+                        <div className="hero-content flex-col lg:flex-row-reverse">
+
+                            <div className="card shrink-0 lg:w-[600px] border">
+                                <form className="card-body">
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Name</span>
+                                        </label>
+                                        <input type="text" placeholder="Your Name" className="input input-bordered" required />
+                                    </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Email</span>
+                                        </label>
+                                        <input type="email" placeholder="Email" className="input input-bordered" required />
+
+                                    </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Write Question</span>
+                                        </label>
+                                        <textarea className="textarea textarea-bordered" placeholder="write Here"></textarea>
+                                    </div>
+                                    <div className="form-control mt-6">
+                                        <button className="btn bg-blue-400 text-white">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </>
