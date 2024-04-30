@@ -71,36 +71,36 @@ const Home = () => {
                 }
             </div>
 
-            <div className='  lg:ml-20 text-4xl border-b-2 pb-4 px-4 border-blue-300 w-max font-semibold mb-10  mt-28  '>
+            <div className='  lg:ml-20 text-4xl border-b-2 pb-4 px-4 border-blue-300 w-max font-semibold mb-2  mt-28  '>
                 <span className=' mb-4 pb-4 '>Question From
                 </span>
                 <p className=' font-light text-xl italic'>Here you can ask any Question in our system related
                 </p>
             </div>
-            <div className=" w-full lg:w-[1200px] mx-auto my-5">
+            <div className=" w-full lg:w-[1200px] mx-auto my-2">
 
                 <div>
                     <div className="hero   ">
                         <div className="hero-content flex-col lg:flex-row-reverse">
 
-                            <div className="card shrink-0 lg:w-[600px] ">
+                            <div className="card  shrink-0 lg:w-[600px] ">
                                 <form className="card-body">
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Name</span>
+                                            <span className="label-text text-xl font-bold ">Name</span>
                                         </label>
                                         <input type="text" placeholder="Your Name" className="input input-bordered" required />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Email</span>
+                                            <span className="label-text text-xl font-bold ">Email</span>
                                         </label>
                                         <input type="email" placeholder="Email" className="input input-bordered" required />
 
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Write Question</span>
+                                            <span className="label-text text-xl font-bold ">Write Question</span>
                                         </label>
                                         <textarea className="textarea textarea-bordered" placeholder="write Here"></textarea>
                                     </div>
@@ -113,8 +113,8 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div className='m-10'>
-                    <div className='  lg:ml-20 text-4xl border-b-2 pb-4 px-4 border-blue-300 w-max font-semibold mb-10  mt-28  '>
+                <div className='mb-10'>
+                    <div className='  lg:ml-20 text-4xl border-b-2 pb-4 px-4 border-blue-300 w-max font-semibold mb-10  mt-10  '>
                         <span className=' mb-4 pb-4 '>Clients Reviews
                         </span>
 
