@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import { getAuth, signOut } from "firebase/auth";
@@ -6,9 +6,33 @@ import toast, { Toaster } from "react-hot-toast";
 import { myContext } from "./Authentication";
 import Swal from "sweetalert2";
 import { FaUserCircle } from "react-icons/fa";
+import Lottie from "lottie-react";
+// import Animation- from "./groovyWalk.json";
+import pp from '../../public/pp.json'
+
 
 
 const Nav = () => {
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem('theme');
+    if (localTheme) {
+      setTheme(localTheme);
+      document.querySelector('html').setAttribute('data-theme', localTheme);
+    }
+  }, []);
+
+  const handleToggle = (e) => {
+    const newTheme = e.target.checked ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    document.querySelector('html').setAttribute('data-theme', newTheme);
+  };
+    // setIsActive(!isActive);
+
+  
+
   const info = useContext(myContext)
   const { user, setDep2, dep2 } = info
   console.log(user)
@@ -35,40 +59,41 @@ const Nav = () => {
 
 
   const nav = <>
-    <li className="text-xl font-semibold"><NavLink to={'/'} style={({ isActive }) => ({
+    <li className="text-xl font-semibold"><NavLink to={'/'}  style={({ isActive ,them}) => ({
       background: isActive ? "white" : "", color: isActive ? "#1bc91b" : "black"
     })}>Home</NavLink></li>
 
     <div className="lg:flex">  <li className="text-xl font-semibold">
-        <NavLink to={'/spot'} style={({ isActive }) => ({
-          background: isActive ? "white" : "", color: isActive ? "#1bc91b" : "black"
-        })}>All Tourists Spot</NavLink>
-      </li>
-      </div>
+      <NavLink to={'/spot'} style={({ isActive }) => ({
+        background: isActive ? "white" : "", color: isActive ? "#1bc91b" : "black"
+      })}>All Tourists Spot</NavLink>
+    </li>
+    </div>
     <div className="lg:flex">  <li className="text-xl font-semibold">
-        <NavLink to={'/add'} style={({ isActive }) => ({
-          background: isActive ? "white" : "", color: isActive ? "#1bc91b" : "black"
-        })}>Add Tourists Spot</NavLink>
-      </li>
-      </div>
+      <NavLink to={'/add'} style={({ isActive }) => ({
+        background: isActive ? "white" : "", color: isActive ? "#1bc91b" : "black"
+      })}>Add Tourists Spot</NavLink>
+    </li>
+    </div>
     <div className="lg:flex">  <li className="text-xl font-semibold">
-        <NavLink to={'/list'} style={({ isActive }) => ({
-          background: isActive ? "white" : "", color: isActive ? "#1bc91b" : "black"
-        })}>My List</NavLink>
-      </li>
-      </div>
-    
+      <NavLink to={'/list'} style={({ isActive }) => ({
+        background: isActive ? "white" : "", color: isActive ? "#1bc91b" : "black"
+      })}>My List</NavLink>
+    </li>
+    </div>
+
     <div className="navbar-end visible lg:hidden md:hidden w-[80px] ">
       {
         user ? <Link ><button onClick={() => signOutt()} className=" font-bold  p-1 btn  justify-center flex rounded-xl w-[80px]">Log out</button></Link> : <Link to={'/login'}><button className="btn font-bold p-1  justify-center flex rounded-xl w-[80px]">Log in</button></Link>
       }
     </div>
-   
+
   </>
   return (
-    <div className="static navbar bg-base-100 px-20">
+    <div className='static navbar bg-base-100 px-20'>
       <Toaster></Toaster>
       <div className="navbar-start">
+
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
 
@@ -86,11 +111,11 @@ const Nav = () => {
         </ul>
       </div>
       <div className="navbar-end">
-       
+
       </div>
       <div className="navbar-end lg:flex md:flex hidden    w-[120px] ml-4">
         {
-         user?<div onClick={() => setUse(!use)} className="  -ml-[50px] tooltip hover:tooltip-open tooltip-left z-30" data-tip={user.displayName ? user.displayName : "Not Available"}  ><img className="rounded-[50%] w-[50px] bg-white " src={user.photoURL} alt="" /></div> : <button onClick={() => setUse(!use)} className=" text-black justify-center  "><FaUserCircle size={40} className="hover:text-red-400" /></button>}
+          user ? <div onClick={() => setUse(!use)} className="  -ml-[50px] tooltip hover:tooltip-open tooltip-left z-30" data-tip={user.displayName ? user.displayName : "Not Available"}  ><img className="rounded-[50%] w-[50px] bg-white " src={user.photoURL} alt="" /></div> : <button onClick={() => setUse(!use)} className=" text-black justify-center  "><FaUserCircle size={40} className="hover:text-red-400" /></button>}
         {
           use ? <div className="absolute border-2 z-50 bg-gray-400 text-white space-y-2 border-gray-300 rounded-xl py-2 top-16  right-9 px-10 mt-4  font-semibold">
             {
@@ -101,11 +126,35 @@ const Nav = () => {
             }
           </div> : ''
         }
-       
+
       </div>
- 
-    
+      <div className=" ml-4">
+
+
+      <div className="flex items-center">
+      <input
+        type="checkbox"
+        id="toggleTheme"
+        checked={theme === 'dark'}
+        onChange={handleToggle}
+        className="hidden"
+      />
+      <label
+        htmlFor="toggleTheme"
+        className={`w-12 h-6 flex items-center pl-1 rounded-full cursor-pointer ${
+          theme === 'dark' ? 'bg-gray-700' : 'bg-gray-300'
+        }`}
+      >
+        <span className={`block w-4 h-4 rounded-full bg-white shadow-md transform transition-transform duration-300 ${theme === 'dark' ? 'translate-x-6' : ''}`}></span>
+      </label>
     </div>
+
+
+      </div>
+
+
+    </div>
+
   );
 };
 

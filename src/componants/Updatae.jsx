@@ -25,7 +25,7 @@ const Updatae = () => {
         const user={options,description,time,url,cost,visitors,location,spot,Country}
         console.log(user)
 
-        fetch(`http://localhost:3028/up/${idd}`, {
+        fetch(`https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/up/${idd}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

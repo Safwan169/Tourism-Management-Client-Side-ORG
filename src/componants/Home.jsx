@@ -28,7 +28,7 @@ const Home = () => {
 
     const data = useLoaderData()
     const slicedData = data.slice(0, 6);
-
+console.log(data)
 
     // console.log(data2)
     return (
@@ -73,6 +73,20 @@ const Home = () => {
                     slicedData.map((d, id) => <Countrycard idx={id} datas={d}></Countrycard>)
                 }
             </div>
+
+            <div className='  lg:ml-20 text-4xl border-b-2 pb-4 px-4 border-blue-300 w-max font-semibold mb-10  mt-28  '>
+                <span className=' mb-4 pb-4 '>Trending destinations
+                </span>
+                <p className=' font-light text-xl italic'>Most popular choices for travelers
+                </p>
+            </div>
+            <div className="lg:grid  lg:grid-cols-3 justify-center gap-4 w-full lg:w-[1200px] mx-auto my-10">
+
+                {
+                    slicedData.map((d, id) => <Countrycard idx={id} datas={d}></Countrycard>)
+                }
+            </div>
+
         </>
     );
 };

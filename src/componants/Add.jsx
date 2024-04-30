@@ -24,7 +24,7 @@ const Add = () => {
         console.log(email,name,options,description)
         const user={email,name,options,description,time,url,cost,visitors,location,spot,Country}
         // send data to the server
-        fetch("http://localhost:3028/ad", {
+        fetch("https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/ad", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

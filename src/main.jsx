@@ -34,7 +34,7 @@ const router = createBrowserRouter([
     children:[
       {
         path:"/",
-        loader:()=>fetch("http://localhost:3028/ad"),
+        loader:()=>fetch("https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/ad"),
         element:<Home></Home>
       },{
         path:"/login",
@@ -47,30 +47,30 @@ const router = createBrowserRouter([
         element:<PrivateRoute><Add></Add></PrivateRoute>
       },{
         path:"/list",
-        loader:()=>fetch(`http://localhost:3028/ad`),
+        loader:()=>fetch(`https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/ad`),
 
         element:<PrivateRoute><List></List></PrivateRoute>
       }
       ,{
         path:"/ad/:_id",
-        loader:()=>fetch(`http://localhost:3028/ad`),
+        loader:()=>fetch(`https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/ad`),
 
         element:<PrivateRoute><Details></Details></PrivateRoute>
       },{
         path:"/spot",
-        loader:()=>fetch(`http://localhost:3028/ad`),
+        loader:()=>fetch(`https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/ad`),
 
         element:<PrivateRoute><Spot></Spot></PrivateRoute>
       } ,{
         path:"/update/:id",
-        // loader:()=>fetch(`http://localhost:3028/ad`),
+        // loader:()=>fetch(`https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/ad`),
 
         element:<PrivateRoute><Updatae></Updatae></PrivateRoute>
       },{
         path:"/country/:Country",
-        loader:()=>fetch(`http://localhost:3028/ad`),
+        loader:()=>fetch(`https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/country`),
 
-        // loader:({params})=>fetch(`http://localhost:3028/country/${params.Country}`),
+        // loader:({params})=>fetch(`https://b9a10-server-side-safwan169-mwvtb8ury-safwan-hossains-projects.vercel.app/country/${params.Country}`),
 
         element:<PrivateRoute><Allcountry></Allcountry></PrivateRoute>
       },
