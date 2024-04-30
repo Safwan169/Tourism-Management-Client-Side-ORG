@@ -11,7 +11,6 @@ import Nav from './componants/Nav';
 import Route from './componants/Route';
 import Home from './componants/Home';
 import Authentication from './componants/Authentication';
-import { HelmetProvider } from 'react-helmet-async';
 import Login from './componants/Login';
 import Register from './componants/Register';
 import Error from './componants/Error';
@@ -23,6 +22,7 @@ import Spot from './componants/Spot';
 import Updatae from './componants/Updatae';
 import Allcountry from './componants/Allcountry';
 import Countrycard from './componants/Countrycard';
+import {  HelmetProvider } from 'react-helmet-async';
 
 
 
@@ -83,10 +83,13 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
   
-
-    <Authentication>
+<HelmetProvider>
+<Authentication>
   <RouterProvider router={router} />
+
   </Authentication>
+</HelmetProvider>
+    
 
    
 

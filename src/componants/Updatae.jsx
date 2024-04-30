@@ -2,6 +2,7 @@ import React from 'react';
 import "animate.css"
 import Swal from 'sweetalert2';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Updatae = () => {
     const id=useParams()
@@ -52,6 +53,9 @@ const Updatae = () => {
 
     return (
           <div  className=' animate__animated  animate__zoomIn animate__delay-0.99s my-20  w-[1200px] mx-auto'>
+            <Helmet>
+                <title>Brite || Update</title>
+            </Helmet>
             <div className='text-center  mt-20 '>
                 <div className=' justify-center mb-10 flex'>
                     <p className='text-2xl font-bold  mb-4 border-b-2 pb-4 px-4 border-black w-max  text-center '>Update Spot</p>

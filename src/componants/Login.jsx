@@ -11,6 +11,7 @@ import { FaEyeSlash } from "react-icons/fa6";
 import { myContext } from './Authentication';
 import { auth } from '../Firebase/firebase.config';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 
 const Login = () => {
@@ -117,7 +118,9 @@ const Login = () => {
     return (
 
         <div>
-
+                    <Helmet>
+                <title>Brite || Log In</title>
+            </Helmet>
             <div className=" hero min-h-screen">
 
                 <div className="lg:w-[600px] animate__animated animate__bounceInDown animate__delay-0.99s  hero-content flex-col lg:flex-row-reverse">

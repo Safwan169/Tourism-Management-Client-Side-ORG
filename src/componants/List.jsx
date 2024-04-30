@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { myContext } from './Authentication';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 const List = () => {
 
@@ -66,6 +67,9 @@ const List = () => {
     // const {Country,spot,cost}=match;
     return (
       <div className='my-20'>
+        <Helmet>
+                <title>Brite || List</title>
+            </Helmet>
         <div className="overflow-x-auto">
           <table className="table  ">
             {/* head */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { CiLocationOn } from 'react-icons/ci';
 import { FaChartArea } from 'react-icons/fa';
 import { IoTimeOutline } from 'react-icons/io5';
@@ -16,6 +17,9 @@ const Details = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Brite || Details</title>
+            </Helmet>
             <div className=''>
                 <div className="hero min-h-screen bg-base-200">
                     <div className="hero-content flex-col lg:gap-10 my-6 lg:h-[500px] lg:flex-row">

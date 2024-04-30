@@ -8,6 +8,7 @@ import { updateProfile } from 'firebase/auth';
 import { myContext } from './Authentication';
 import { auth } from '../Firebase/firebase.config';
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
     const [eye, setEye] = useState(false)
@@ -122,7 +123,9 @@ const Register = () => {
 
 
         <div className="hero min-h-screen ">
-         
+         <Helmet>
+                <title>Brite || Register</title>
+            </Helmet>
 
 
 

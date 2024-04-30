@@ -16,6 +16,7 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Card from './Card';
 import Countrycard from './Countrycard';
+import { Helmet } from 'react-helmet-async';
 
 
 const Home = () => {
@@ -30,6 +31,11 @@ const Home = () => {
     // console.log(data2)
     return (
         <>
+
+            <Helmet>
+                <title>Brite || Home</title>
+            </Helmet>
+
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
