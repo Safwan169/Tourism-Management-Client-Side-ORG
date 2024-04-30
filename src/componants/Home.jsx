@@ -83,7 +83,7 @@ const Home = () => {
                     <div className="hero   ">
                         <div className="hero-content flex-col lg:flex-row-reverse">
 
-                            <div className="card shrink-0 lg:w-[600px] border">
+                            <div className="card shrink-0 lg:w-[600px] ">
                                 <form className="card-body">
                                     <div className="form-control">
                                         <label className="label">
