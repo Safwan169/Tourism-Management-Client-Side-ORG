@@ -120,10 +120,10 @@ const Home = () => {
 
                     </div>
                 </div>
-                <div className="flex">
-                    <div className='mt-5'>
+                <div className="flex gap-5 mb-10">
+                    <div className=' mt-5'>
 
-                        <div className="card w-96 rounded-1/2  bg-base-100 shadow-xl">
+                        <div className="h-[400px] card w-96 rounded-1/2  bg-base-100 shadow-xl">
                             <figure><img src="https://i.ibb.co/R3D6G0k/1s.jpg" alt="" /></figure>
                             <div className="card-body">
 
@@ -133,9 +133,9 @@ const Home = () => {
                         </div>
 
                     </div>
-                    <div className='mt-5'>
+                    <div className=' mt-5'>
 
-                        <div className="card w-96 rounded-1/2  bg-base-100 shadow-xl">
+                        <div className="h-[400px] card w-96 rounded-1/2  bg-base-100 shadow-xl">
                             <figure><img src="https://i.ibb.co/4KQR7kv/2d.jpg" alt="" /></figure>
                             <div className="card-body">
 
@@ -145,9 +145,9 @@ const Home = () => {
                         </div>
 
                     </div>
-                    <div className='mt-5'>
+                    <div className=' mt-5'>
 
-                        <div className="card w-96 rounded-1/2  bg-base-100 shadow-xl">
+                        <div className="h-[400px] card w-96 rounded-1/2  bg-base-100 shadow-xl">
                             <figure><img className='h-[200px] w-[200px]' src="https://i.ibb.co/fdvNbML/3d.jpg" alt="" /></figure>
                             <div className="card-body">
 
