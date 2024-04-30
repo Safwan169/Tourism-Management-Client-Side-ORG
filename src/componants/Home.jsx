@@ -19,14 +19,11 @@ import Countrycard from './Countrycard';
 
 
 const Home = () => {
-    // // console.log(data[0])
-    // console.log(dataa)
-    // useEffect(()=>{fetch('http://localhost:3028/Country')
-    // .then(res=>res.json())
-    // .then(data=>SetDataa(data))},[]) const [dataa,SetDataa]=useState()
-
+   
 
     const data = useLoaderData()
+console.log(data)
+
     const slicedData = data.slice(0, 6);
 console.log(data)
 

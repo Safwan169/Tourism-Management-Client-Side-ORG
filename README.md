@@ -1,4 +1,3 @@
-https://gaviaspreview.com/wp/tevily/home-2/
 https://tourism-management-ac9b5.web.app
 
 
@@ -25,9 +24,10 @@ https://tourism-management-ac9b5.web.app
 
 # Npm Package Used :
 
-* Swiper Slider
-* Animate.CSS
-* AOS.Package
+* LOttie React
+* React Awesome revel 
+* React-tooltip
+
 
 
 

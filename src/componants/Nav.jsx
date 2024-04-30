@@ -59,7 +59,7 @@ const Nav = () => {
 
 
   const nav = <>
-    <li className="text-xl font-semibold"><NavLink to={'/'}  style={({ isActive ,them}) => ({
+    <li className="text-xl font-semibold"><NavLink to={'/'}  style={({ isActive }) => ({
       background: isActive ? "white" : "", color: isActive ? "#1bc91b" : "black"
     })}>Home</NavLink></li>
 

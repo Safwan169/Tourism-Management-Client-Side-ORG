@@ -32,11 +32,12 @@ const router = createBrowserRouter([
     element: <Route></Route>,
     errorElement:<Error></Error>,
     children:[
+      // {
+      //   path:"/",
+      //   loader:()=>fetch(`https://b9a10-server-side-safwan169-a2m3bwiso-safwan-hossains-projects.vercel.app//ad`),
+      //   element:<Home></Home>
+      // },
       {
-        path:"/",
-        loader:()=>fetch("https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/ad"),
-        element:<Home></Home>
-      },{
         path:"/login",
         element:<Login></Login>
       },{
@@ -47,18 +48,18 @@ const router = createBrowserRouter([
         element:<PrivateRoute><Add></Add></PrivateRoute>
       },{
         path:"/list",
-        loader:()=>fetch(`https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/ad`),
+        loader:()=>fetch(`https://b9a10-server-side-safwan169-8vft2dmxe-safwan-hossains-projects.vercel.app/ad`),
 
         element:<PrivateRoute><List></List></PrivateRoute>
       }
       ,{
         path:"/ad/:_id",
-        loader:()=>fetch(`https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/ad`),
+        loader:()=>fetch(`https://b9a10-server-side-safwan169-a2m3bwiso-safwan-hossains-projects.vercel.app//ad`),
 
         element:<PrivateRoute><Details></Details></PrivateRoute>
       },{
         path:"/spot",
-        loader:()=>fetch(`https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/ad`),
+        loader:()=>fetch(`https://b9a10-server-side-safwan169-iumlyw8ko-safwan-hossains-projects.vercel.app//ad`),
 
         element:<PrivateRoute><Spot></Spot></PrivateRoute>
       } ,{
@@ -68,7 +69,7 @@ const router = createBrowserRouter([
         element:<PrivateRoute><Updatae></Updatae></PrivateRoute>
       },{
         path:"/country/:Country",
-        loader:()=>fetch(`https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/country`),
+        loader:()=>fetch(`https://b9a10-server-side-safwan169-a2m3bwiso-safwan-hossains-projects.vercel.app//country`),
 
         // loader:({params})=>fetch(`https://b9a10-server-side-safwan169-mwvtb8ury-safwan-hossains-projects.vercel.app/country/${params.Country}`),
 

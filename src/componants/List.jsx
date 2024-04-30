@@ -41,7 +41,7 @@ const List = () => {
         if (result.isConfirmed) {
   
   
-          fetch(`https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/de/${id}`, {
+          fetch(`https://b9a10-server-side-safwan169-8vft2dmxe-safwan-hossains-projects.vercel.app/de/${id}`, {
             method: 'DELETE'
           })
             .then(res => res.json())
