@@ -28,7 +28,7 @@ const Allcards = ({ data }) => {
                     <div className="card-body  w-full ">
                         <div className="h-[50px] lg:flex lg:justify-between ">
                             <p className="text-2xl font-semibold w-[339px] md:w-full md:text-center lg:text-start  hv text-start ml-2  ">{spot}</p>
-                            {/* <div className='  lg:text-right  text-lime-600 text-2xl font-semibold w-[339px] md:w-full md:text-center  hv text-start ml-2 '>{Country}</div> */}
+                            <div className='  lg:text-right  text-lime-600 text-2xl font-semibold w-[339px] md:w-full md:text-center  hv text-start ml-2 '>{Country}</div>
 
                         </div>
                         <div className="md:flex lg:flex-col md:justify-between">
