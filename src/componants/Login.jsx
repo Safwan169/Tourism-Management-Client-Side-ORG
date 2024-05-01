@@ -125,14 +125,14 @@ const Login = () => {
 
                 <div className="lg:w-[600px] animate__animated animate__bounceInDown animate__delay-0.99s  hero-content flex-col lg:flex-row-reverse">
 
-                    <div className="card shrink-0 w-[500px]   bg-base-100">
-                        <form onSubmit={handleSubmit} className="card-body">
+                    <div className="card shrink-0 lg:w-[500px]   bg-base-100">
+                        <form onSubmit={handleSubmit} className=" card-body">
                             <p className='lg:text-4xl  md:text-4xl text-2xl mb-5 pb-4  border-b border-black font-semibold flex '>Sign in with</p>
 
 
                             <div className="form-control">
-                                <div className='w-full   text-center flex justify-center '>
-                                    <div className="  w-[600px] card shrink-0 max-w-sm  bg-base-100">
+                                <div className='lg:w-full  w-svw  text-center flex justify-center '>
+                                    <div className="  lg:w-[600px] card shrink-0 max-w-sm  bg-base-100">
                                         '
                                         <div className="flex w-full flex-col gap-2">
                                             <button onClick={() => google()} type="button" className="btn gap-2 bg-gray-5">

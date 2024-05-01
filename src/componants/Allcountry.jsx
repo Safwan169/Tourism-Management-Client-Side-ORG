@@ -8,8 +8,8 @@ const Allcountry = () => {
     const data =useLoaderData()
     const country=useParams()
     console.log(data)
-    const  card=data.filter(d=>d.name===country.Country)
-    // console.log(card)
+    const  card=data.filter(d=>d.Country===country.Country)
+    console.log(card)
     return (
         <div className="  flex justify-center gap-4 w-full lg:w-[1200px] mx-auto my-10">
             <Helmet>

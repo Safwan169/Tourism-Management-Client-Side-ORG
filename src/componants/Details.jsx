@@ -11,7 +11,7 @@ const Details = () => {
     const user = useParams()
     console.log(user)
     console.log(data)
-    const last = data.find(d => d._id === user._id);
+    const last = data.find(d => (d._id) == user._id);
     console.log(last)
     const { options, description, time, url, cost, visitors, location, spot, Country } = last
 

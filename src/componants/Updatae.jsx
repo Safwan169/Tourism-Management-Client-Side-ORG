@@ -24,9 +24,9 @@ const Updatae = () => {
         const description=e.target.description.value;
         // console.log(options,description)
         const user={options,description,time,url,cost,visitors,location,spot,Country}
-        console.log(user)
+        console.log(spot)
 
-        fetch(`https://b9a10-server-side-safwan169.vercel.app/ad/up/${idd}`, {
+        fetch(`https://b9a10-server-side-safwan169.vercel.app/up/${idd}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

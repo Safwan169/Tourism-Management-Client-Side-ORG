@@ -25,7 +25,7 @@ const Add = () => {
         console.log(email,name,options,description)
         const user={email,name,options,description,time,url,cost,visitors,location,spot,Country}
         // send data to the server
-        fetch("https://b9a10-server-side-safwan169-7ipd5wlc9-safwan-hossains-projects.vercel.app/ad", {
+        fetch("https://b9a10-server-side-safwan169.vercel.app/ad", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -49,11 +49,11 @@ const Add = () => {
 
             })}
     return (
-        <div  className=' animate__animated  animate__zoomIn animate__delay-0.99s my-10  w-[1200px] mx-auto'>
+        <div  className=' animate__animated  animate__zoomIn animate__delay-0.99s my-10  lg:w-[1200px] mx-auto'>
             <Helmet>
                 <title>Brite || Add Spot </title>
             </Helmet>
-            <div className='text-center  mt-20 '>
+            <div className='text-center  w-svw lg:w-full mt-20 '>
                 <div className=' justify-center mb-10 flex'>
                     <p className='text-2xl font-bold  mb-4 border-b-2 pb-4 px-4 border-black w-max  text-center '>Add Tourist Spot</p>
 
@@ -61,7 +61,7 @@ const Add = () => {
                 <form onSubmit={handleSubmit} >
 
                     <div className='flex gap-5  justify-center  '>
-                        <span className='w-1/2'>
+                        <span className='w-full lg:w-1/2'>
                             {/* <label className="label">
                                 <span className="label-text text-xl font-semibold">Email</span>
                             </label>

@@ -80,7 +80,7 @@ const Home = () => {
             <div className='  lg:ml-20 text-4xl border-b-2 pb-4 px-4 border-blue-300 w-max font-semibold mb-2  mt-28  '>
                 <span className=' mb-4 pb-4 '>Question From
                 </span>
-                <p className=' font-light text-xl italic'>Here you can ask any Question in our system related
+                <p className=' font-light text-xs lg:text-xl italic'>Here you can ask any Question in our system related
                 </p>
             </div>
             <div className=" w-full lg:w-[1200px] mx-auto my-2">
@@ -126,7 +126,7 @@ const Home = () => {
 
                     </div>
                 </div>
-                <div className="flex gap-5 mb-10">
+                <div className="lg:flex-row flex flex-col gap-5 mb-10">
                     <div className=' mt-5'>
 
                         <div className="h-[400px] card w-96 rounded-1/2  bg-base-100 shadow-xl">
