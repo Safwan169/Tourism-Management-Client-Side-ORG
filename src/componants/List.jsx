@@ -10,7 +10,6 @@ const List = () => {
   const auth = useContext(myContext)
   const { user } = auth
   //console.log(user.reloadUserInfo.email
-  )
   // //console.log(data[0].email)
   const match = data.filter(d => d.email === user.reloadUserInfo.email)
   const [datas,setDatas]=useState(match)
