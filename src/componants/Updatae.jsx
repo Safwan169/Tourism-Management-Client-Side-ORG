@@ -6,11 +6,11 @@ import { Helmet } from 'react-helmet-async';
 
 const Updatae = () => {
     const id=useParams()
-    console.log(id.id)
+    //console.log(id.id)
     const idd=id.id
     const handleSubmit=(e)=>{
         e.preventDefault()
-        // console.log(e.target.options.value)
+        // //console.log(e.target.options.value)
         // const email=e.target.email.value;
         // const name=e.target.name.value;
         const Country =e.target.Country .value;
@@ -22,9 +22,9 @@ const Updatae = () => {
         const url=e.target.url.value;
         const options=e.target.options.value;
         const description=e.target.description.value;
-        // console.log(options,description)
+        // //console.log(options,description)
         const user={options,description,time,url,cost,visitors,location,spot,Country}
-        console.log(spot)
+        //console.log(spot)
 
         fetch(`https://b9a10-server-side-safwan169.vercel.app/up/${idd}`, {
             method: 'PUT',
@@ -35,7 +35,7 @@ const Updatae = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                //console.log(data);
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: ' Updated Successfully!',

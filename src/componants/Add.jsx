@@ -6,11 +6,11 @@ import { Helmet } from 'react-helmet-async';
 // import { useParams } from 'react-router-dom';
 
 const Add = () => {
-    // console.log(id)
+    // //console.log(id)
     // const user=useContext(myContext)
     const handleSubmit=(e)=>{
         e.preventDefault()
-        // console.log(e.target.options.value)
+        // //console.log(e.target.options.value)
         const email=e.target.email.value;
         const name=e.target.name.value;
         const Country =e.target.Country .value;
@@ -22,7 +22,7 @@ const Add = () => {
         const url=e.target.url.value;
         const options=e.target.options.value;
         const description=e.target.description.value;
-        console.log(email,name,options,description)
+        //console.log(email,name,options,description)
         const user={email,name,options,description,time,url,cost,visitors,location,spot,Country}
         // send data to the server
         fetch("https://b9a10-server-side-safwan169.vercel.app/ad", {
@@ -34,7 +34,7 @@ const Add = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                //console.log(data);
                 if(data.insertedId){
 
                     Swal.fire({

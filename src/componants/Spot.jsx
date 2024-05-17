@@ -7,27 +7,27 @@ import { FaArrowDown } from "react-icons/fa6";
 
 const Spot = () => {
     const data = useLoaderData()
-    console.log(data)
+    //console.log(data)
     const [dd, setData] = useState(data)
 
-    // console.log(data)
+    // //console.log(data)
     const short = () => {
-        // console.log('dd')
+        // //console.log('dd')
                  const dataArray = Object.values(data);
 
     const sortedData = dataArray.sort((a, b) => b.cost - a.cost);
     setData(sortedData)
 
-        // console.log(dd.cost)
+        // //console.log(dd.cost)
     }
     const min = () => {
-        // console.log('dd')
+        // //console.log('dd')
                  const dataArray = Object.values(data);
 
     const sortedData = dataArray.sort((a, b) => a.cost - b.cost);
     setData(sortedData)
 
-        // console.log(dd.cost)
+        // //console.log(dd.cost)
     }
 
    

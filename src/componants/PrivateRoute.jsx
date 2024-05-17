@@ -6,7 +6,7 @@ import loader from '../../public/loader.json'
 const PrivateRoute = ({children}) => {
     const data=useContext(myContext)
     const {user,loading}=data
-    console.log(user)
+    //console.log(user)
     if (loading) {
         return <Lottie animationData={loader}></Lottie>
     }

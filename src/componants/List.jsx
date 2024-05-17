@@ -9,17 +9,17 @@ const List = () => {
   const data = useLoaderData()
   const auth = useContext(myContext)
   const { user } = auth
-  console.log(user.reloadUserInfo.email
+  //console.log(user.reloadUserInfo.email
   )
-  // console.log(data[0].email)
+  // //console.log(data[0].email)
   const match = data.filter(d => d.email === user.reloadUserInfo.email)
   const [datas,setDatas]=useState(match)
-  console.log(datas)
+  //console.log(datas)
 
 
     const navigate = useNavigate()
     const handleUpdate = (d) => {
-      console.log(d.d._id)
+      //console.log(d.d._id)
       const id = d.d._id
       navigate(`/update/${id}`)
   
@@ -27,7 +27,7 @@ const List = () => {
   
     }
     const handleDelate = (d) => {
-      console.log(d.d._id)
+      //console.log(d.d._id)
       const id = d.d._id
       // navigate(`/update/${id}`)
       Swal.fire({
@@ -47,7 +47,7 @@ const List = () => {
           })
             .then(res => res.json())
             .then(data => {
-              console.log(data);
+              //console.log(data);
               if (data.deletedCount > 0) {
                 Swal.fire(
                   'Deleted!',

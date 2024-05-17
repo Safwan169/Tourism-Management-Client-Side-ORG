@@ -23,12 +23,12 @@ const Home = () => {
 
 
     const data = useLoaderData()
-    console.log(data)
+    //console.log(data)
 
     const slicedData = data.slice(0, 6);
-    console.log(data)
+    //console.log(data)
 
-    // console.log(data2)
+    // //console.log(data2)
     return (
         <>
 

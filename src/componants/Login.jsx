@@ -43,9 +43,9 @@ const Login = () => {
 
             })
             .catch((error) => {
-                console.log(error.message)
+                //console.log(error.message)
             })
-        // console.log(google)
+        // //console.log(google)
     }
 
     const git = () => {
@@ -75,19 +75,19 @@ const Login = () => {
 
             })
             .catch((error) => {
-                console.log(error.massage)
+                //console.log(error.massage)
             })
     }
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // console.log('hoida')
+        // //console.log('hoida')
         const email = (e.target.email.value)
         const password = (e.target.password.value)
         setOkk('')
         setOk('')
-        console.log(email,password)
+        //console.log(email,password)
 
         signInUser(email, password)
             .then((userCredential) => {
@@ -110,7 +110,7 @@ const Login = () => {
                 setOk('Incorrect email or password')
                 // toast.error('Incorrect email or password')
 
-                    // console.log('fasdfjhsda')
+                    // //console.log('fasdfjhsda')
 
             })
     }

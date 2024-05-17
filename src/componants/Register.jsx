@@ -66,7 +66,7 @@ const Register = () => {
         
             return
         }
-        // console.log(ok)
+        // //console.log(ok)
 
         createUser(email, password, Name, photoURL)
             .then((userCredential) => {
@@ -87,7 +87,7 @@ const Register = () => {
                     displayName: `${Name}`, photoURL: `${photoURL}`
                 }).then((e) => {
                     // Profile updated!
-                    console.log('update hoisa', e)
+                    //console.log('update hoisa', e)
                     setDep(true)
 
 

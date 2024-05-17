@@ -7,7 +7,7 @@ import { IoTimeOutline } from "react-icons/io5";
 import { useNavigate } from "react-router";
 import { Helmet } from 'react-helmet-async';
 const Allcards = ({ data }) => {
-    console.log(data.cost)
+    //console.log(data.cost)
     const navigate = useNavigate()
 
 

@@ -29,13 +29,13 @@ const Nav = () => {
     localStorage.setItem('theme', newTheme);
     document.querySelector('html').setAttribute('data-theme', newTheme);
   };
-    // setIsActive(!isActive);
+ 
 
-  
+
 
   const info = useContext(myContext)
   const { user, setDep2, dep2 } = info
-  console.log(user)
+  //console.log(user)
   const [use, setUse] = useState(false)
   const signOutt = () => {
 
@@ -59,7 +59,7 @@ const Nav = () => {
 
 
   const nav = <>
-    <li className="text-xl font-semibold"><NavLink to={'/'}  style={({ isActive }) => ({
+    <li className="text-xl font-semibold"><NavLink to={'/'} style={({ isActive }) => ({
       background: isActive ? "white" : "", color: isActive ? "#1bc91b" : "black"
     })}>Home</NavLink></li>
 
@@ -131,29 +131,29 @@ const Nav = () => {
       <div className=" ml-4">
 
 
-      <div className="flex items-center">
-      <input
-        type="checkbox"
-        id="toggleTheme"
-        checked={theme === 'dark'}
-        onChange={handleToggle}
-        className="hidden"
-      />
-      <label
-        htmlFor="toggleTheme"
-        className={`w-12 h-6 flex items-center pl-1 rounded-full cursor-pointer ${
-          theme === 'dark' ? 'bg-gray-700' : 'bg-gray-300'
-        }`}
-      >
-        <span className={`block w-4 h-4 rounded-full bg-white shadow-md transform transition-transform duration-300 ${theme === 'dark' ? 'translate-x-6' : ''}`}></span>
-      </label>
-    </div>
+        <div className="flex items-center">
+          <input
+            type="checkbox"
+            id="toggleTheme"
+            checked={theme === 'dark'}
+            onChange={handleToggle}
+            className="hidden"
+          />
+          <label
+            htmlFor="toggleTheme"
+            className={`w-12 h-6 flex items-center pl-1 rounded-full cursor-pointer ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-300'
+              }`}
+          >
+            <span className={`block w-4 h-4 rounded-full bg-white shadow-md transform transition-transform duration-300 ${theme === 'dark' ? 'translate-x-6' : ''}`}></span>
+          </label>
+        </div>
 
 
       </div>
 
 
     </div>
+
 
   );
 };

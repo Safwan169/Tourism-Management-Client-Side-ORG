@@ -6,7 +6,7 @@ import { FaChartArea, FaCheckCircle } from "react-icons/fa";
 import { IoTimeOutline } from "react-icons/io5";
 import { useNavigate } from "react-router";
 const Ext = ({data}) => {
-    console.log(data._id)
+    //console.log(data._id)
 
     const navigate = useNavigate()
 
